@@ -1,0 +1,46 @@
+:root {
+  --bg: #f6f8fc;
+  --text: #1d2433;
+  --primary: #0f62fe;
+  --card: #ffffff;
+  --muted: #5e6b85;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+.container { width: min(1100px, 92%); margin: 0 auto; }
+.site-header { background: #fff; border-bottom: 1px solid #e5ebf5; position: sticky; top: 0; }
+.nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .9rem 0; }
+.brand { font-weight: 700; text-decoration: none; color: var(--text); }
+nav { display: flex; gap: 1rem; }
+nav a { text-decoration: none; color: var(--muted); }
+.section { padding: 4rem 0; }
+.hero { padding: 5rem 0 4rem; }
+.hero-grid { display: grid; gap: 2rem; grid-template-columns: 1.5fr 1fr; align-items: start; }
+.kicker { color: var(--primary); font-weight: 600; }
+h1 { font-size: clamp(2rem, 4vw, 3rem); margin: .2rem 0 1rem; }
+h2 { margin-top: 0; font-size: clamp(1.5rem, 3vw, 2rem); }
+p { color: var(--muted); line-height: 1.6; }
+.btn { display: inline-block; padding: .7rem 1rem; border-radius: 10px; text-decoration: none; font-weight: 600; border: 1px solid transparent; }
+.btn-primary { background: var(--primary); color: #fff; }
+.btn-outline { border-color: #c9d6ef; color: var(--text); }
+.cta-group { display: flex; gap: .8rem; margin-top: 1.2rem; }
+.hero-card, .card { background: var(--card); border: 1px solid #e1e7f2; border-radius: 14px; padding: 1.2rem; }
+.cards { display: grid; gap: 1rem; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.alt { background: #eff4ff; }
+.cta { background: #e9f0ff; }
+.lead-form { display: grid; gap: .8rem; max-width: 520px; }
+label { display: grid; gap: .35rem; font-weight: 600; }
+input { border: 1px solid #c9d6ef; border-radius: 10px; padding: .7rem .8rem; font: inherit; }
+.site-footer { padding: 1.5rem 0; border-top: 1px solid #e5ebf5; background: #fff; }
+
+@media (max-width: 900px) {
+  nav { display: none; }
+  .hero-grid { grid-template-columns: 1fr; }
+  .cards { grid-template-columns: 1fr; }
+}
